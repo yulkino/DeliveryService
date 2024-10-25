@@ -1,0 +1,36 @@
+﻿services:
+  deliveryservice:
+    image: deliveryservice
+    build:
+      context: .
+      dockerfile: DeliveryService/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=DeliveryServiceDb;Username=postgres;Password=877676565
+    depends_on:
+      - postgres
+    networks:
+      - delivery_network
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=877676565
+      - POSTGRES_DB=DeliveryServiceDb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - delivery_network
+
+volumes:
+  pgdata:
+    
+networks:
+  delivery_network:
+    driver: bridge
+

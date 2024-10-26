@@ -1,6 +1,6 @@
 using DeliveryService.Domain;
-using DeliveryService.Extensions;
 using DeliveryService.Infrastructure;
+using DeliveryService.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddScoped<OrderFilterService>();
 
 var app = builder.Build();
 
@@ -47,8 +47,8 @@ app.MapGet("/districts", async (
 app.MapGet("/orders/filter/{cityDistrict:guid}", async (
         [FromRoute] Guid cityDistrict,
         [FromQuery] DateTime firstDeliveryDateTime,
-        [FromServices] ApplicationContext applicationContext) => 
-        await GetFilteredOrders(cityDistrict, firstDeliveryDateTime, applicationContext))
+        [FromServices] OrderFilterService orderFilterService) => 
+        await GetFilteredOrders(cityDistrict, firstDeliveryDateTime, orderFilterService))
     .WithName("FilterOrders")
     .WithOpenApi();
 
@@ -58,18 +58,12 @@ return;
 async Task<Results<Ok<List<Order>>, NotFound<string>>> GetFilteredOrders(
     Guid cityDistrict, 
     DateTime firstDeliveryDateTime, 
-    ApplicationContext applicationContext)
+    OrderFilterService orderFilterService)
 {
-    var district = await applicationContext.Districts.SingleOrDefaultAsync(x => x.Id == cityDistrict);
-    if (district == null)
+    var result = await orderFilterService.GetFilteredOrders(cityDistrict, firstDeliveryDateTime);
+    if (result == null)
     {
         return TypedResults.NotFound($"District with ID {cityDistrict} not found");
     }
-        
-    var orders = await applicationContext.Orders
-        .FilterByDistrict(district)
-        .FilterByDeliveryTime(firstDeliveryDateTime)
-        .ToListAsync();
-        
-    return TypedResults.Ok(orders);
+    return TypedResults.Ok(result);
 }

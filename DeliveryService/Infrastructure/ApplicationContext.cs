@@ -1,3 +1,4 @@
+using Bogus;
 using DeliveryService.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -15,6 +16,8 @@ public sealed class ApplicationContext(DbContextOptions<ApplicationContext> opti
 
         modelBuilder.Entity<Order>(ConfigureOrderEntity);
         modelBuilder.Entity<District>(ConfigureDistrictEntity);
+        
+        SeedRandomData(modelBuilder);
     }
 
     private static void ConfigureOrderEntity(EntityTypeBuilder<Order> entity)
@@ -42,5 +45,41 @@ public sealed class ApplicationContext(DbContextOptions<ApplicationContext> opti
         
         entity.Property(e => e.CityName)
             .IsRequired();
+    }
+
+    private static void SeedRandomData(ModelBuilder modelBuilder)
+    {
+        var districtCount = 3;
+        var districtIds = Enumerable
+            .Range(0, districtCount)
+            .Select(_ => Guid.NewGuid()).
+            ToList();
+
+        var districtFaker = new Faker<District>()
+            .RuleFor(d => d.Id, f => districtIds[f.IndexFaker])
+            .RuleFor(d => d.Name, f => f.Address.CityPrefix() + " District")
+            .RuleFor(d => d.CityName, f => f.Address.City());
+
+        var districts = districtFaker.Generate(districtCount);
+        modelBuilder
+            .Entity<District>()
+            .HasData(districts);
+        
+        var orderFaker = new Faker<Order>()
+            .RuleFor(o => o.Id, _ => Guid.NewGuid())
+            .RuleFor(o => o.Weight, f => f.Random.Float(0.5f, 100))
+            .RuleFor(o => o.DeliveryTime, f => f.Date.Soon().ToUniversalTime())
+            .RuleFor(o => o.District, f => districts[f.Random.Int(0, districts.Count - 1)]);
+
+        var orders = orderFaker.Generate(1000);
+        modelBuilder
+            .Entity<Order>()
+            .HasData(orders.Select(order => new
+            {
+                order.Id,
+                order.Weight,
+                DistrictId = order.District.Id,
+                order.DeliveryTime
+            }));
     }
 }

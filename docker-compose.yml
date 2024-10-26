@@ -11,6 +11,7 @@
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=DeliveryServiceDb;Username=postgres;Password=877676565
     depends_on:
       - postgres
+    restart: unless-stopped
     networks:
       - delivery_network
 
@@ -24,6 +25,7 @@
       - POSTGRES_DB=DeliveryServiceDb
     volumes:
       - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
     networks:
       - delivery_network
 

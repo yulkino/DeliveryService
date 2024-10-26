@@ -2,7 +2,7 @@ namespace DeliveryService.Domain;
 
 public class District
 {
-    public Guid Id { get; private set; }
-    public string Name { get; private set; }
-    public string CityName {get; private set;}
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string CityName {get; set;}
 }

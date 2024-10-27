@@ -1,0 +1,395 @@
+2024-10-27 14:36:08.241 +04:00 [Information] Executed DbCommand ("75"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:36:08.278 +04:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:36:08.290 +04:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:36:08.296 +04:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:36:08.297 +04:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:36:08.302 +04:00 [Information] No migrations were applied. The database is already up to date.
+2024-10-27 14:36:08.329 +04:00 [Information] Now listening on: "http://localhost:5139"
+2024-10-27 14:36:08.330 +04:00 [Information] Application started. Press Ctrl+C to shut down.
+2024-10-27 14:36:08.330 +04:00 [Information] Hosting environment: "Development"
+2024-10-27 14:36:08.330 +04:00 [Information] Content root path: "/Users/guzeldavletshina/RiderProjects/DeliveryService/DeliveryService"
+2024-10-27 14:36:08.832 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger""" - null null
+2024-10-27 14:36:08.878 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger""" - 301 0 null 46.5499ms
+2024-10-27 14:36:08.880 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/index.html""" - null null
+2024-10-27 14:36:08.905 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 25.1627ms
+2024-10-27 14:36:08.915 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui.css""" - null null
+2024-10-27 14:36:08.915 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui-bundle.js""" - null null
+2024-10-27 14:36:08.919 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui-standalone-preset.js""" - null null
+2024-10-27 14:36:08.944 +04:00 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-10-27 14:36:08.944 +04:00 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-10-27 14:36:08.945 +04:00 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-10-27 14:36:08.946 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 31.0798ms
+2024-10-27 14:36:08.946 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 30.5589ms
+2024-10-27 14:36:08.946 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 29.4095ms
+2024-10-27 14:36:09.061 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/v1/swagger.json""" - null null
+2024-10-27 14:36:09.063 +04:00 [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-27 14:36:09.070 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/favicon-32x32.png""" - null null
+2024-10-27 14:36:09.070 +04:00 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2024-10-27 14:36:09.070 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 0.625ms
+2024-10-27 14:36:09.098 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 37.7773ms
+2024-10-27 14:37:42.584 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/districts""" - null null
+2024-10-27 14:37:42.587 +04:00 [Warning] Failed to determine the https port for redirect.
+2024-10-27 14:37:42.594 +04:00 [Information] Executing endpoint '"HTTP: GET /districts"'
+2024-10-27 14:37:42.600 +04:00 [Information] Getting districts...
+2024-10-27 14:37:42.715 +04:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Districts\" AS d"
+2024-10-27 14:37:42.731 +04:00 [Information] Got 3 orders
+2024-10-27 14:37:42.733 +04:00 [Information] Executed endpoint '"HTTP: GET /districts"'
+2024-10-27 14:37:42.737 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/districts""" - 200 null "application/json; charset=utf-8" 153.564ms
+2024-10-27 14:37:47.634 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders""" - null null
+2024-10-27 14:37:47.635 +04:00 [Information] Executing endpoint '"HTTP: GET /orders"'
+2024-10-27 14:37:47.639 +04:00 [Information] Getting orders...
+2024-10-27 14:37:47.752 +04:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"DeliveryTime\", o.\"DistrictId\", o.\"Weight\", d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Orders\" AS o
+INNER JOIN \"Districts\" AS d ON o.\"DistrictId\" = d.\"Id\""
+2024-10-27 14:37:47.774 +04:00 [Information] Got 1000 orders
+2024-10-27 14:37:47.777 +04:00 [Information] Executed endpoint '"HTTP: GET /orders"'
+2024-10-27 14:37:47.777 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders""" - 200 null "application/json; charset=utf-8" 142.9744ms
+2024-10-27 14:37:52.660 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b100""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - null null
+2024-10-27 14:37:52.661 +04:00 [Information] Executing endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:37:52.672 +04:00 [Information] Getting orders with filters: City District Id 73709569-076c-4459-8f0d-beaffff3b100, DeliveryTime 10/26/2024 16:56:46
+2024-10-27 14:37:52.711 +04:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__cityDistrict_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Districts\" AS d
+WHERE d.\"Id\" = @__cityDistrict_0
+LIMIT 2"
+2024-10-27 14:37:52.726 +04:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__entity_equality_district_0_Id='?' (DbType = Guid), @__deliveryTime_1='?' (DbType = DateTime), @__AddMinutes_2='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"DeliveryTime\", o.\"DistrictId\", o.\"Weight\"
+FROM \"Orders\" AS o
+INNER JOIN \"Districts\" AS d ON o.\"DistrictId\" = d.\"Id\"
+WHERE d.\"Id\" = @__entity_equality_district_0_Id AND o.\"DeliveryTime\" >= @__deliveryTime_1 AND o.\"DeliveryTime\" <= @__AddMinutes_2"
+2024-10-27 14:37:52.727 +04:00 [Information] Got 11 orders
+2024-10-27 14:37:52.729 +04:00 [Information] Setting HTTP status code 200.
+2024-10-27 14:37:52.730 +04:00 [Information] Writing value of type '"List`1"' as Json.
+2024-10-27 14:37:52.730 +04:00 [Information] Executed endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:37:52.730 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b100""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - 200 null "application/json; charset=utf-8" 70.3367ms
+2024-10-27 14:37:58.010 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b101""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - null null
+2024-10-27 14:37:58.010 +04:00 [Information] Executing endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:37:58.011 +04:00 [Information] Getting orders with filters: City District Id 73709569-076c-4459-8f0d-beaffff3b101, DeliveryTime 10/26/2024 16:56:46
+2024-10-27 14:37:58.018 +04:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__cityDistrict_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Districts\" AS d
+WHERE d.\"Id\" = @__cityDistrict_0
+LIMIT 2"
+2024-10-27 14:37:58.018 +04:00 [Error] Validation fails - City District with Id 73709569-076c-4459-8f0d-beaffff3b101 not found
+2024-10-27 14:37:58.018 +04:00 [Error] Validation error caused by District with Id 73709569-076c-4459-8f0d-beaffff3b101
+2024-10-27 14:37:58.019 +04:00 [Information] Setting HTTP status code 404.
+2024-10-27 14:37:58.019 +04:00 [Information] Writing value of type '"String"' as Json.
+2024-10-27 14:37:58.019 +04:00 [Information] Executed endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:37:58.020 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b101""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - 404 null "application/json; charset=utf-8" 9.9307ms
+2024-10-27 14:40:41.050 +04:00 [Information] Application is shutting down...
+2024-10-27 14:41:01.199 +04:00 [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-27 14:41:01.615 +04:00 [Debug] Entity Framework Core "8.0.10" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"8.0.10+18d07c54eacaffa5bf8128d47eecdb5255d86376"' with options: "None"
+2024-10-27 14:41:01.622 +04:00 [Debug] Creating DbConnection.
+2024-10-27 14:41:01.635 +04:00 [Debug] Created DbConnection. (12ms).
+2024-10-27 14:41:01.638 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.701 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.706 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.711 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (3ms).
+2024-10-27 14:41:01.718 +04:00 [Debug] Creating DbCommand for '"ExecuteScalar"'.
+2024-10-27 14:41:01.723 +04:00 [Debug] Created DbCommand for '"ExecuteScalar"' (2ms).
+2024-10-27 14:41:01.723 +04:00 [Debug] Initialized DbCommand for '"ExecuteScalar"' (6ms).
+2024-10-27 14:41:01.724 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.741 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.746 +04:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.796 +04:00 [Information] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.799 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.801 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (1ms).
+2024-10-27 14:41:01.813 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.813 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.813 +04:00 [Debug] Creating DbCommand for '"ExecuteReader"'.
+2024-10-27 14:41:01.813 +04:00 [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:01.813 +04:00 [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:01.813 +04:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:41:01.817 +04:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:41:01.821 +04:00 [Debug] Closing data reader to '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.821 +04:00 [Debug] A data reader for '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' is being disposed after spending 3ms reading results.
+2024-10-27 14:41:01.822 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.822 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.823 +04:00 [Debug] Migrating using database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.823 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.830 +04:00 [Debug] Creating DbCommand for '"ExecuteScalar"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Created DbCommand for '"ExecuteScalar"' (0ms).
+2024-10-27 14:41:01.830 +04:00 [Debug] Initialized DbCommand for '"ExecuteScalar"' (0ms).
+2024-10-27 14:41:01.830 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.830 +04:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.831 +04:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.831 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.831 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.832 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.836 +04:00 [Debug] Creating DbCommand for '"ExecuteScalar"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Created DbCommand for '"ExecuteScalar"' (0ms).
+2024-10-27 14:41:01.836 +04:00 [Debug] Initialized DbCommand for '"ExecuteScalar"' (0ms).
+2024-10-27 14:41:01.836 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.836 +04:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.837 +04:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)"
+2024-10-27 14:41:01.837 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.837 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.837 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.837 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.837 +04:00 [Debug] Creating DbCommand for '"ExecuteReader"'.
+2024-10-27 14:41:01.837 +04:00 [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:01.837 +04:00 [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:01.837 +04:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:41:01.838 +04:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2024-10-27 14:41:01.838 +04:00 [Debug] Closing data reader to '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.838 +04:00 [Debug] A data reader for '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' is being disposed after spending 0ms reading results.
+2024-10-27 14:41:01.838 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:01.838 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:01.843 +04:00 [Information] No migrations were applied. The database is already up to date.
+2024-10-27 14:41:01.849 +04:00 [Debug] Hosting starting
+2024-10-27 14:41:01.869 +04:00 [Information] Now listening on: "http://localhost:5139"
+2024-10-27 14:41:01.869 +04:00 [Debug] Loaded hosting startup assembly "DeliveryService"
+2024-10-27 14:41:01.869 +04:00 [Information] Application started. Press Ctrl+C to shut down.
+2024-10-27 14:41:01.869 +04:00 [Information] Hosting environment: "Development"
+2024-10-27 14:41:01.869 +04:00 [Information] Content root path: "/Users/guzeldavletshina/RiderProjects/DeliveryService/DeliveryService"
+2024-10-27 14:41:01.869 +04:00 [Debug] Hosting started
+2024-10-27 14:41:01.963 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" received FIN.
+2024-10-27 14:41:01.965 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" accepted.
+2024-10-27 14:41:01.965 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" started.
+2024-10-27 14:41:01.968 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-10-27 14:41:01.968 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" disconnecting.
+2024-10-27 14:41:01.969 +04:00 [Debug] Connection id ""0HN7MEFD0NC07"" stopped.
+2024-10-27 14:41:02.010 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" accepted.
+2024-10-27 14:41:02.010 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" accepted.
+2024-10-27 14:41:02.010 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" started.
+2024-10-27 14:41:02.010 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" started.
+2024-10-27 14:41:02.027 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/index.html""" - null null
+2024-10-27 14:41:02.027 +04:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2024-10-27 14:41:02.085 +04:00 [Debug] No candidates found for the request path '"/swagger/index.html"'
+2024-10-27 14:41:02.085 +04:00 [Debug] Request did not match any endpoints
+2024-10-27 14:41:02.123 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" completed keep alive response.
+2024-10-27 14:41:02.123 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 97.1809ms
+2024-10-27 14:41:02.167 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/v1/swagger.json""" - null null
+2024-10-27 14:41:02.168 +04:00 [Debug] No candidates found for the request path '"/swagger/v1/swagger.json"'
+2024-10-27 14:41:02.168 +04:00 [Debug] Request did not match any endpoints
+2024-10-27 14:41:02.170 +04:00 [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-10-27 14:41:02.211 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" completed keep alive response.
+2024-10-27 14:41:02.211 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 43.5112ms
+2024-10-27 14:41:06.601 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" received FIN.
+2024-10-27 14:41:06.601 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" received FIN.
+2024-10-27 14:41:06.602 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-10-27 14:41:06.602 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" disconnecting.
+2024-10-27 14:41:06.603 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-10-27 14:41:06.603 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" disconnecting.
+2024-10-27 14:41:06.606 +04:00 [Debug] Connection id ""0HN7MEFD0NC09"" stopped.
+2024-10-27 14:41:06.606 +04:00 [Debug] Connection id ""0HN7MEFD0NC08"" stopped.
+2024-10-27 14:41:17.769 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" accepted.
+2024-10-27 14:41:17.770 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" started.
+2024-10-27 14:41:17.770 +04:00 [Information] Request starting "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b100""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - null null
+2024-10-27 14:41:17.772 +04:00 [Debug] 1 candidate(s) found for the request path '"/orders/filter/73709569-076c-4459-8f0d-beaffff3b100"'
+2024-10-27 14:41:17.774 +04:00 [Debug] Endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"' with route pattern '"/orders/filter/{cityDistrict:guid}"' is valid for the request path '"/orders/filter/73709569-076c-4459-8f0d-beaffff3b100"'
+2024-10-27 14:41:17.775 +04:00 [Debug] Request matched endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:41:17.778 +04:00 [Debug] Static files was skipped as the request already matched an endpoint.
+2024-10-27 14:41:17.780 +04:00 [Warning] Failed to determine the https port for redirect.
+2024-10-27 14:41:17.784 +04:00 [Information] Executing endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:41:17.789 +04:00 [Information] Getting orders with filters: City District Id 73709569-076c-4459-8f0d-beaffff3b100, DeliveryTime 10/26/2024 16:56:46
+2024-10-27 14:41:17.790 +04:00 [Debug] Validating City District Id 73709569-076c-4459-8f0d-beaffff3b100
+2024-10-27 14:41:17.813 +04:00 [Debug] Entity Framework Core "8.0.10" initialized '"ApplicationContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"8.0.10+18d07c54eacaffa5bf8128d47eecdb5255d86376"' with options: "None"
+2024-10-27 14:41:17.828 +04:00 [Debug] Compiling query expression: "
+"'"DbSet<District>()
+    .SingleOrDefault(x => x.Id == __cityDistrict_0)"'
+2024-10-27 14:41:17.921 +04:00 [Debug] Generated query execution expression: "
+"'"queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<District>(
+    asyncEnumerable: new SingleQueryingEnumerable<District>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: District.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: District.CityName (string) Required, 1], [Property: District.Name (string) Required, 2] }
+            SELECT TOP(2) d.Id, d.CityName, d.Name
+            FROM Districts AS d
+            WHERE d.Id == @__cityDistrict_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, District>, 
+        DeliveryService.Infrastructure.ApplicationContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)"'
+2024-10-27 14:41:17.935 +04:00 [Debug] Creating DbConnection.
+2024-10-27 14:41:17.935 +04:00 [Debug] Created DbConnection. (0ms).
+2024-10-27 14:41:17.935 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:17.935 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:17.935 +04:00 [Debug] Creating DbCommand for '"ExecuteReader"'.
+2024-10-27 14:41:17.935 +04:00 [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:17.937 +04:00 [Debug] Initialized DbCommand for '"ExecuteReader"' (2ms).
+2024-10-27 14:41:17.938 +04:00 [Debug] Executing DbCommand [Parameters=["@__cityDistrict_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Districts\" AS d
+WHERE d.\"Id\" = @__cityDistrict_0
+LIMIT 2"
+2024-10-27 14:41:17.948 +04:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__cityDistrict_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT d.\"Id\", d.\"CityName\", d.\"Name\"
+FROM \"Districts\" AS d
+WHERE d.\"Id\" = @__cityDistrict_0
+LIMIT 2"
+2024-10-27 14:41:17.960 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"District"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:17.966 +04:00 [Debug] Closing data reader to '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:17.966 +04:00 [Debug] A data reader for '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' is being disposed after spending 17ms reading results.
+2024-10-27 14:41:17.966 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:17.966 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:17.966 +04:00 [Debug] Validation successes - Starting filtering process with City District Id 73709569-076c-4459-8f0d-beaffff3b100 and DeliveryTime 10/26/2024 16:56:46
+2024-10-27 14:41:17.969 +04:00 [Debug] Compiling query expression: "
+"'"DbSet<Order>()
+    .Where(o => o.District == __district_0)
+    .Where(o => o.DeliveryTime >= __deliveryTime_1 && o.DeliveryTime <= __AddMinutes_2)"'
+2024-10-27 14:41:17.999 +04:00 [Debug] Generated query execution expression: "
+"'"queryContext => 
+{
+    queryContext.AddParameter(
+        name: \"__entity_equality_district_0_Id\", 
+        value: (object)Invoke(queryContext => RelationalSqlTranslatingExpressionVisitor.ParameterValueExtractor<Guid?>(
+            context: queryContext, 
+            baseParameterName: \"__district_0\", 
+            complexPropertyChain: null, 
+            property: Property: District.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd), queryContext));
+    return new SingleQueryingEnumerable<Order>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Order.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Order.DeliveryTime (DateTime) Required, 1], [Property: Order.DistrictId (no field, Guid) Shadow Required FK Index, 2], [Property: Order.Weight (float) Required, 3] }
+            SELECT o.Id, o.DeliveryTime, o.DistrictId, o.Weight
+            FROM Orders AS o
+            INNER JOIN Districts AS d ON o.DistrictId == d.Id
+            WHERE (d.Id == @__entity_equality_district_0_Id) && ((o.DeliveryTime >= @__deliveryTime_1) && (o.DeliveryTime <= @__AddMinutes_2))), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Order>, 
+        DeliveryService.Infrastructure.ApplicationContext, 
+        False, 
+        False, 
+        True
+    );
+}"'
+2024-10-27 14:41:18.002 +04:00 [Debug] Opening connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:18.002 +04:00 [Debug] Opened connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:18.002 +04:00 [Debug] Creating DbCommand for '"ExecuteReader"'.
+2024-10-27 14:41:18.002 +04:00 [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:18.002 +04:00 [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+2024-10-27 14:41:18.002 +04:00 [Debug] Executing DbCommand [Parameters=["@__entity_equality_district_0_Id='?' (DbType = Guid), @__deliveryTime_1='?' (DbType = DateTime), @__AddMinutes_2='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"DeliveryTime\", o.\"DistrictId\", o.\"Weight\"
+FROM \"Orders\" AS o
+INNER JOIN \"Districts\" AS d ON o.\"DistrictId\" = d.\"Id\"
+WHERE d.\"Id\" = @__entity_equality_district_0_Id AND o.\"DeliveryTime\" >= @__deliveryTime_1 AND o.\"DeliveryTime\" <= @__AddMinutes_2"
+2024-10-27 14:41:18.008 +04:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__entity_equality_district_0_Id='?' (DbType = Guid), @__deliveryTime_1='?' (DbType = DateTime), @__AddMinutes_2='?' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"DeliveryTime\", o.\"DistrictId\", o.\"Weight\"
+FROM \"Orders\" AS o
+INNER JOIN \"Districts\" AS d ON o.\"DistrictId\" = d.\"Id\"
+WHERE d.\"Id\" = @__entity_equality_district_0_Id AND o.\"DeliveryTime\" >= @__deliveryTime_1 AND o.\"DeliveryTime\" <= @__AddMinutes_2"
+2024-10-27 14:41:18.017 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Context '"ApplicationContext"' started tracking '"Order"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-27 14:41:18.020 +04:00 [Debug] Closing data reader to '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:18.020 +04:00 [Debug] A data reader for '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' is being disposed after spending 12ms reading results.
+2024-10-27 14:41:18.020 +04:00 [Debug] Closing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:18.020 +04:00 [Debug] Closed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:18.020 +04:00 [Debug] Filtering result contains 11 orders
+2024-10-27 14:41:18.020 +04:00 [Information] Got 11 orders
+2024-10-27 14:41:18.021 +04:00 [Information] Setting HTTP status code 200.
+2024-10-27 14:41:18.021 +04:00 [Information] Writing value of type '"List`1"' as Json.
+2024-10-27 14:41:18.025 +04:00 [Information] Executed endpoint '"HTTP: GET /orders/filter/{cityDistrict:guid}"'
+2024-10-27 14:41:18.026 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" completed keep alive response.
+2024-10-27 14:41:18.027 +04:00 [Debug] '"ApplicationContext"' disposed.
+2024-10-27 14:41:18.029 +04:00 [Debug] Disposing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:41:18.030 +04:00 [Debug] Disposed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).
+2024-10-27 14:41:18.030 +04:00 [Information] Request finished "HTTP/1.1" "GET" "http"://"localhost:5139""""/orders/filter/73709569-076c-4459-8f0d-beaffff3b100""?firstDeliveryDateTime=2024-10-26T16%3A56%3A46.357979Z" - 200 null "application/json; charset=utf-8" 259.7269ms
+2024-10-27 14:41:21.603 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" received FIN.
+2024-10-27 14:41:21.603 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2024-10-27 14:41:21.604 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" disconnecting.
+2024-10-27 14:41:21.605 +04:00 [Debug] Connection id ""0HN7MEFD0NC0A"" stopped.
+2024-10-27 14:43:32.355 +04:00 [Information] Application is shutting down...
+2024-10-27 14:43:32.358 +04:00 [Debug] Hosting stopping
+2024-10-27 14:43:32.368 +04:00 [Debug] Hosting stopped
+2024-10-27 14:43:32.371 +04:00 [Debug] '"ApplicationContext"' disposed.
+2024-10-27 14:43:32.371 +04:00 [Debug] Disposing connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"'.
+2024-10-27 14:43:32.372 +04:00 [Debug] Disposed connection to database '"DeliveryServiceDb"' on server '"tcp://localhost:5432"' (0ms).

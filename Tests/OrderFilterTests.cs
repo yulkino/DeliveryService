@@ -3,6 +3,8 @@ using DeliveryService.Domain;
 using DeliveryService.Infrastructure;
 using DeliveryService.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace Tests;
 
@@ -28,7 +30,8 @@ public class OrderFilterTests
         Seed();
         _context.SaveChanges();
         
-        _orderFilterService = new OrderFilterService(_context);
+        var mockLogger = Mock.Of<ILogger<OrderFilterService>>();
+        _orderFilterService = new OrderFilterService(_context, mockLogger);
     }
     
     [Fact]
